@@ -19,3 +19,9 @@ We can copy them into the appropriate directories ourselves, but we can save
 ourselves a bit of work and use a distroless image from chainguard instead
 of building from scratch. It includes very common shared libraries,
 and also some TLS certificates to make your life easier.
+
+
+Unlike busybox, it does not include a shell. This implies a contract between
+the image builder and the ops team that it should not need a shell to debug,
+not exposing a shell communicates this to the person debugging the container.
+In this case it should be configured via env variables, log to stdout only, etc etc.
