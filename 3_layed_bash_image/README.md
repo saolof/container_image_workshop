@@ -20,3 +20,13 @@ corresponds to one layer, which is why authors usually try to reduce the number 
 
 
 The from clause defines another stack of images that new commands stack tarballs on top of.
+
+
+## A fancier way to chroot: overlays.
+
+Linux has a command called mount which can be used with a
+fancy filesystem called overlayfs which allows us to merge untarred
+layers without duplicating files. It takes a lower directory which is
+read only, and an upper directory where changes go.
+
+![Overlays](https://tunnelix.com/wp-content/uploads/2024/02/overlay.jpg)
