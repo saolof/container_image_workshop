@@ -22,7 +22,7 @@ corresponds to one layer, which is why authors usually try to reduce the number 
 The from clause defines another stack of images that new commands stack tarballs on top of.
 
 
-## A fancier way to chroot: overlays.
+## A fancy way to layer files: overlays.
 
 Linux has a command called mount which can be used with a
 fancy filesystem called overlayfs which allows us to merge untarred
